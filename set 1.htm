@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAG RAE Exam 2026 Mock Test - Bharti Classes</title>
+    <style>
+        :root {
+            --primary-bg: #1a2a6c;
+            --accent: #fdbb2d;
+            --white: #ffffff;
+            --green: #28a745;
+            --red: #dc3545;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --gray: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: #f0f2f5; color: #333; }
+        
+        .header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .header h1 { margin: 0; font-size: 32px; text-transform: uppercase; letter-spacing: 1px; }
+        .header p { margin: 5px 0; font-weight: 500; font-size: 14px; opacity: 0.9; }
+        .contact-links { margin-top: 15px; font-size: 15px; }
+        .contact-links a { color: #fff; text-decoration: none; font-weight: bold; background: rgba(0,0,0,0.2); padding: 5px 12px; border-radius: 20px; margin: 0 5px; }
+
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 20px; }
+        
+        #instruction-screen, #result-screen { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .lang-select { background: #eee; padding: 15px; border-radius: 8px; margin: 20px 0; }
+
+        #quiz-screen { display: none; gap: 20px; flex-wrap: wrap; }
+        .main-col { flex: 2; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); min-height: 450px; position: relative; }
+        .side-col { flex: 0.8; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: fit-content; }
+
+        .palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 15px; }
+        .pal-btn { width: 35px; height: 35px; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+        
+        .white { background: var(--white); color: #333; }
+        .green { background: var(--green) !important; color: white; border-color: var(--green); }
+        .red { background: var(--red) !important; color: white; border-color: var(--red); }
+        .purple { background: var(--purple) !important; color: white; border-color: var(--purple); }
+        .pink { background: var(--pink) !important; color: white; border-color: var(--pink); }
+
+        .btn { padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: 0.2s; }
+        .btn-start { background: var(--green); color: white; font-size: 18px; width: 200px; }
+        .btn-nav { background: #007bff; color: white; }
+        .btn-review { background: var(--purple); color: white; }
+        .btn-submit { background: #333; color: white; float: right; }
+        
+        .option { padding: 12px; border: 2px solid #eee; margin: 10px 0; border-radius: 8px; cursor: pointer; display: flex; align-items: center; }
+        .option:hover { border-color: #007bff; background: #f8fbff; }
+        .option.selected { border-color: #007bff; background: #e7f1ff; }
+
+        .solution-card { border-bottom: 1px solid #eee; padding: 20px 0; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Bharti Classes</h1>
+    <p>(Mathematics (Advance and Arithmetic) for all competitive exams including SSC, Bank, Railway, BPSC or any State PCS Exam, UPSC, State SSC etc.)</p>
+    <div class="contact-links">
+        <b>CAG RAE Exam 2026 Mock Test: Practice Set 1</b> | 
+        WhatsApp: 8271750420 | 
+        <a href="https://t.me/+ygJ49yopGc41YmRl" target="_blank">Join Telegram</a>
+    </div>
+</div>
+
+<div class="container">
+    <div id="instruction-screen">
+        <h2 style="text-align: center; border-bottom: 2px solid var(--accent); padding-bottom: 10px;">Exam Instructions / परीक्षा निर्देश</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; font-size: 14px;">
+            <div>
+                <h4>English</h4>
+                <ul>
+                    <li>30 Questions from Practice Set 1 (Income Tax).</li>
+                    <li>Marking: +1 for Correct, -1/3 for Incorrect.</li>
+                    <li>Passing: 50%.</li>
+                    <li><b>English version is final.</b></li>
+                    <li><span style="color:var(--green)">Green</span>: Attempted</li>
+                    <li><span style="color:var(--red)">Red</span>: Skipped</li>
+                    <li><span style="color:var(--purple)">Purple</span>: Review (Answered)</li>
+                    <li><span style="color:var(--pink)">Pink</span>: Review (Unanswered)</li>
+                </ul>
+            </div>
+            <div style="border-left: 1px solid #ddd; padding-left: 30px;">
+                <h4>हिंदी</h4>
+                <ul>
+                    <li>प्रैक्टिस सेट 1 (आयकर) से 30 प्रश्न।</li>
+                    <li>अंकन: सही +1, गलत -1/3।</li>
+                    <li>उत्तीर्ण: 50%।</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="lang-select">
+            <strong>Default Language:</strong>
+            <select id="start-lang">
+                <option value="en">English</option>
+            </select>
+        </div>
+        <center><button class="btn btn-start" onclick="initQuiz()">START EXAM</button></center>
+    </div>
+
+    <div id="quiz-screen">
+        <div class="main-col">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 id="q-title">Question 1</h3>
+                <div>Lang: <select id="toggle-lang"><option value="en">English</option></select></div>
+            </div>
+            <hr>
+            <p id="q-text" style="font-size: 18px; min-height: 80px;"></p>
+            <div id="options-container"></div>
+            
+            <div style="margin-top: 40px;">
+                <button class="btn btn-nav" onclick="move(-1)">Previous</button>
+                <button class="btn btn-nav" onclick="move(1)">Save & Next</button>
+                <button class="btn btn-review" onclick="markReview()">Mark for Review</button>
+                <button class="btn btn-submit" onclick="submitExam()">SUBMIT TEST</button>
+            </div>
+        </div>
+
+        <div class="side-col">
+            <h4>Question Palette</h4>
+            <div class="palette" id="palette"></div>
+        </div>
+    </div>
+
+    <div id="result-screen" style="display: none;">
+        <h1 id="result-status" style="text-align: center;"></h1>
+        <div id="stats" style="text-align: center; font-size: 20px; background: #f8f9fa; padding: 20px; border-radius: 10px;"></div>
+        <hr>
+        <h3>Verified Solutions</h3>
+        <div id="solutions-list"></div>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        { q: "Tax on income of previous year is charged in:", opts: ["Same Previous Year", "Next Assessment Year", "Next Financial Year", "Calendar Year"], ans: 1, exp: "Income of the previous year is normally assessed in the assessment year following the previous year." },
+        { q: "A person includes:", opts: ["Individual & HUF", "Company & Firm", "Local Authority", "All of the above"], ans: 3, exp: "Section 2(31) defines 'person' as an inclusive list of various legal entities." },
+        { q: "Residential status is determined for every:", opts: ["Previous Year", "Assessment Year", "Financial Year", "None"], ans: 0, exp: "Residential status must be determined separately for each previous year." },
+        { q: "An Indian company is always:", opts: ["Resident", "Non-Resident", "Not Ordinarily Resident", "None"], ans: 0, exp: "An Indian company is always a resident in India." },
+        { q: "HUF stands for:", opts: ["Hindu Unfair Association", "Hindu Undivided Family", "Human Unified Federation", "None"], ans: 1, exp: "HUF is recognized as a separate person/entity." },
+        { q: "Section 2(31) of Income Tax Act defines:", opts: ["Assessee", "Income", "Person", "Assessment Year"], ans: 2, exp: "Section 2(31) provides the definition of a 'Person'." },
+        { q: "CBDT stands for:", opts: ["Central Board of Direct Taxes", "Central Bureau of Direct Taxes", "Core Board of Daily Tax", "None"], ans: 0, exp: "CBDT is the apex body for administration of direct taxes." },
+        { q: "Income tax is a ______ tax.", opts: ["Indirect", "Direct", "Proportional", "Progressive"], ans: 1, exp: "Income tax is a direct tax levied on the income of a person." },
+        { q: "Residential status of an HUF depends on:", opts: ["Karta's stay", "Control and Management", "Place of registration", "Number of members"], ans: 1, exp: "Residency of HUF depends on where the control and management of its affairs is situated." },
+        { q: "Income deemed to accrue or arise in India is defined under Section:", opts: ["Section 5", "Section 7", "Section 9", "Section 10"], ans: 2, exp: "Section 9 deals with incomes deemed to accrue or arise in India." },
+        { q: "The circulars issued by CBDT are binding on:", opts: ["Assessee", "Income Tax Authorities", "Courts", "All of the above"], ans: 1, exp: "CBDT circulars are binding on the department authorities but not on assessees or courts." },
+        { q: "For a Non-Resident, income is taxable in India if it is:", opts: ["Received in India", "Accrued in India", "Both A and B", "None"], ans: 2, exp: "Non-residents are taxed on income received or accrued in India." },
+        { q: "Which of the following is not an 'Artificial Juridical Person'?", opts: ["University", "Idol of a Deity", "Partnership Firm", "Bar Council"], ans: 2, exp: "A partnership firm is a separate category of person." },
+        { q: "Section 2(1A) defines:", opts: ["Assessee", "Agricultural Income", "Person", "Previous Year"], ans: 1, exp: "Section 2(1A) defines Agricultural Income." },
+        { q: "In determining residential status of a company, POEM stands for:", opts: ["Place of Effective Management", "Power of Every Member", "Permanent Office", "None"], ans: 0, exp: "POEM (Place of Effective Management) is used for foreign company residency." },
+        { q: "Income of previous year is generally charged in:", opts: ["Same PY", "Next AY", "Next FY", "Any of these"], ans: 1, exp: "General rule: Income of PY is taxed in AY." },
+        { q: "Remittance of past untaxed foreign income into India is:", opts: ["Taxable in ROR", "Taxable in NR", "Not Taxable in current year", "None"], ans: 2, exp: "Remittance is movement of money, not income of the current year." },
+        { q: "Income tax is calculated on:", opts: ["Monthly Income", "Annual Income", "Quarterly Income", "Weekly Income"], ans: 1, exp: "Tax is computed on total annual income." },
+        { q: "Who is an assessee?", opts: ["Person by whom tax is payable", "Person who filed ITR", "Every person", "None"], ans: 0, exp: "Assessee is a person by whom tax or any other sum is payable under the Act." },
+        { q: "The highest administrative authority of IT in India is:", opts: ["Finance Minister", "CBDT", "President", "Director of IT"], ans: 1, exp: "CBDT is the highest administrative authority." },
+        { q: "Assessment year is a period of 12 months starting from:", opts: ["1st Jan", "1st April", "1st July", "Diwali"], ans: 1, exp: "AY always starts on 1st April following the PY." },
+        { q: "Previous year is defined in Section:", opts: ["2(34)", "3", "2(9)", "4"], ans: 1, exp: "Section 3 defines the Previous Year." },
+        { q: "Total income of a person is determined on the basis of his:", opts: ["Citizenship", "Residential Status", "Marital Status", "Education"], ans: 1, exp: "Scope of income depends on residential status." },
+        { q: "Legal representative of a deceased person is:", opts: ["Individual", "Deemed Assessee", "Assessee in default", "HUF"], ans: 1, exp: "They are treated as deemed assessees for the deceased's income." },
+        { q: "Surcharge is a tax on:", opts: ["Income", "Wealth", "Income Tax", "Gross Salary"], ans: 2, exp: "Surcharge is calculated on the amount of income tax." },
+        { q: "A municipality is a _______ under IT Act.", opts: ["Individual", "Company", "Local Authority", "AJP"], ans: 2, exp: "Local authorities include municipalities." },
+        { q: "Income includes:", opts: ["Profits", "Dividends", "Lottery winnings", "All of these"], ans: 3, exp: "Section 2(24) provides an inclusive definition of income." },
+        { q: "Which section gives 'Basis of Charge'?", opts: ["Section 2", "Section 4", "Section 5", "Section 6"], ans: 1, exp: "Section 4 is the charging section." },
+        { q: "Body of Individuals (BOI) consists of:", opts: ["Companies", "Individuals only", "Firms", "Any person"], ans: 1, exp: "BOI consists of individuals only." },
+        { q: "The rates of IT for a company are fixed by:", opts: ["Finance Act", "IT Act", "RBI", "Company Act"], ans: 0, exp: "Tax rates are prescribed in the Annual Finance Act." }
+    ];
+
+    let current = 0; let answers = new Array(questions.length).fill(null); let status = new Array(questions.length).fill('white');
+
+    function initQuiz() { document.getElementById('instruction-screen').style.display = 'none'; document.getElementById('quiz-screen').style.display = 'flex'; renderPalette(); showQuestion(); }
+    function renderPalette() { const c = document.getElementById('palette'); c.innerHTML = ''; questions.forEach((_, i) => { let b = document.createElement('div'); b.className = `pal-btn ${status[i]}`; b.innerText = i+1; b.id = `pal-${i}`; b.onclick = () => { current = i; showQuestion(); }; c.appendChild(b); }); }
+    function showQuestion() { const q = questions[current]; document.getElementById('q-title').innerText = `Question ${current + 1}`; document.getElementById('q-text').innerText = q.q; const oc = document.getElementById('options-container'); oc.innerHTML = ''; q.opts.forEach((o, i) => { let d = document.createElement('div'); d.className = `option ${answers[current] === i ? 'selected' : ''}`; d.innerHTML = `<b>${String.fromCharCode(65+i)}.</b> ${o}`; d.onclick = () => { answers[current] = i; status[current] = 'green'; showQuestion(); updatePalette(); }; oc.appendChild(d); }); if(status[current] === 'white') { status[current] = 'red'; updatePalette(); } }
+    function move(s) { current += s; if(current < 0) current = 0; if(current >= questions.length) current = questions.length-1; showQuestion(); }
+    function markReview() { status[current] = (answers[current] !== null) ? 'purple' : 'pink'; updatePalette(); move(1); }
+    function updatePalette() { document.getElementById(`pal-${current}`).className = `pal-btn ${status[current]}`; }
+    function submitExam() { if(confirm("Submit Test?")) calculateResult(); }
+    function calculateResult() {
+        let s = 0; let cor = 0; let wr = 0;
+        questions.forEach((q, i) => { if(answers[i] === q.ans) { s++; cor++; } else if(answers[i] !== null) { s -= (1/3); wr++; } });
+        document.getElementById('quiz-screen').style.display = 'none'; document.getElementById('result-screen').style.display = 'block';
+        document.getElementById('result-status').innerHTML = s >= (questions.length/2) ? "Final Result: PASS 🥳" : "Final Result: FAIL 😟";
+        document.getElementById('stats').innerHTML = `Score: ${s.toFixed(2)} / 30 | Correct: ${cor} | Incorrect: ${wr}`;
+        let sl = ''; questions.forEach((q, i) => {
+            sl += `<div class="solution-card"><p><b>Q${i+1}. ${q.q}</b></p><p style="color:green">Correct: ${q.opts[q.ans]}</p><p><i>${q.exp}</i></p></div>`;
+        });
+        document.getElementById('solutions-list').innerHTML = sl;
+    }
+</script>
+</body>
+</html>
